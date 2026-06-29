@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
 
     const _type = body?._type as string
     if (_type) {
-      revalidateTag(_type, { stale: 0, revalidate: 0, expire: 0 })
-      revalidateTag('all', { stale: 0, revalidate: 0, expire: 0 })
+      revalidateTag(_type, "seconds")
+      revalidateTag('all', "seconds")
     }
 
     return NextResponse.json({ revalidated: true, type: _type })
