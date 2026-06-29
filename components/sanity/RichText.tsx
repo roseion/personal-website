@@ -1,6 +1,6 @@
 import { PortableText, type PortableTextComponents } from '@portabletext/react'
 import { urlFor } from '@/lib/utils'
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import type { SanityImageSource } from '@sanity/image-url'
 
 const components: PortableTextComponents = {
   block: {

@@ -5,7 +5,7 @@ import RichText from '@/components/sanity/RichText'
 import Link from 'next/link'
 import { ChevronLeft, ExternalLink, CodeXml } from 'lucide-react'
 import type { Metadata } from 'next'
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import type { SanityImageSource } from '@sanity/image-url'
 
 interface Props {
   params: Promise<{ slug: string }>

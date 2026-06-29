@@ -6,6 +6,7 @@ export default defineType({
   type: 'array',
   of: [
     defineField({
+      name: 'block',
       title: 'Block',
       type: 'block',
       styles: [
@@ -41,6 +42,7 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'image',
       type: 'image',
       options: { hotspot: true },
       fields: [
@@ -49,6 +51,7 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'code',
       type: 'code',
       title: '代码块',
     }),
