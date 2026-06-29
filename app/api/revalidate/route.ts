@@ -1,4 +1,4 @@
-import { updateTag } from 'next/cache'
+import { revalidateTag } from 'next/cache'
 import { parseBody } from 'next-sanity/webhook'
 import { NextRequest, NextResponse } from 'next/server'
 
@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
 
     const _type = body?._type as string
     if (_type) {
-      updateTag(_type)
-      updateTag('all')
+      revalidateTag(_type, { stale: 0, revalidate: 0, expire: 0 })
+      revalidateTag('all', { stale: 0, revalidate: 0, expire: 0 })
     }
 
     return NextResponse.json({ revalidated: true, type: _type })
